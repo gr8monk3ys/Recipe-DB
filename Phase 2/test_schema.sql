@@ -1,21 +1,21 @@
 select '1----------';
-select pk_name from Pokemon
-where pk_type1 = 'Fire' or pk_type2 = 'Fire';
+select r2_name from rating
+where r2_name = 'Hells Kitchen' or r2_id = 1;
 
 select '2----------';
-update Party SET pt_slot1 = '1' where pt_ptid = '1';
+update establishment set e_restkey = 4 where e_restkey = 1;
 
 select '3----------';
-delete from Party
-where pt_slot1 <> 'None' and pt_ptid = 1;
+delete from establishment
+where pt_slot1 <> 'None' and e_restkey = 1;
 
 select '4----------';
-insert into Party values (1, 4, 7, 0, 0, 0, 0);
+insert into establishment values(4, 'McDonalds', '123 Bellview Ln.',5,'909-653-3235');
 
 select '5----------';
-select pk_name from Stat
-inner join Pokemon on pk_pkid = s_pkid 
-where s_bst > 300;
+select e_name from establishment
+inner join rating on r2_name = e_name 
+where r2_id > 1;
 
 select '6----------';
 select pk_name,
@@ -26,12 +26,8 @@ select pk_name,
        mx_sdef,
        mx_spd,
        mx_mxst
-  from Pokemon,
-       Max
- where pk_pkid = mx_pkid and 
-       (pk_type1 = 'Flying' or 
-        pk_type2 = 'Flying') and 
-       mx_spd > 250
+from Customer, Max
+ where pk_pkid = mx_pkid and (pk_type1 = 'Flying' or pk_type2 = 'Flying') and mx_spd > 250
  group by pk_name;
 
 select '7----------';
@@ -57,7 +53,7 @@ where pk_pkid = s_pkid and s_def > 60 and s_sdef > 60;
 
 select '11----------';
 11. update Type
-   SET t_name = 'Elec'
+   set t_name = 'Elec'
  where t_typeid = 13;
 
 select '12----------';
@@ -83,3 +79,9 @@ where s_class not in (select c_class from classes
 where s_launched in (select min(s_launched) from ships));
 
 select '17---------';
+
+select '18---------';
+
+select '19---------';
+
+select '20---------';
