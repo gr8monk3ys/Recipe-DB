@@ -19,7 +19,7 @@ def menu():
 
 @app.route('/serial_management')
 def serial_management():
-    return render_tamplate('serial_management.html')
+    return render_template('serial_management.html')
 
 @app.route('/item_management')
 def item_management():
