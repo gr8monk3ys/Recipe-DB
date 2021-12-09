@@ -1,23 +1,15 @@
 import json
 from flask import Flask, render_template, request, redirect, url_for
-# from flask_navigation import Navigation
+
+api = 'https://api.poweredbyvendify.me'
 
 app = Flask(__name__)
-# nav = Navigation(app)
-# app.config["SECRET_KEY"] = "abc"
-
-# nav.Bar('top', [
-#     nav.Item('Menu', 'menu'),
-#     nav.Item('Serial Management', 'serial_management'),
-#     nav.Item('Item Management', 'item_management'),
-#     nav.Item('User Management', 'user_management')
-# ])
 
 @app.route('/')
 def menu():
     return render_template('menu.html')
 
-@app.route('/serial_management')
+@app.route(api + '/serial_management')
 def serial_management():
     return render_tamplate('serial_management.html')
 

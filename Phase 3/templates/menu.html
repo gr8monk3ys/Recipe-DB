@@ -22,16 +22,13 @@
                 </label>
 
                 <ul class="menu__box">
-                    <!-- {% for item in nav.top %}
-                    <li class="{{ 'active' if item.is_active else '' }}">
-                        <a class="menu__item" href="{{ item.url }}">{{ item.label }}</a>
-                    </li> -->
+                    
                     <li><a class="menu__item" href="{{ url_for('menu') }}">Menu</a></li>
                     <li><a class="menu__item" href="{{ url_for('serial_management') }}">Serial Management</a></li>
-                    <!-- <li><a class="menu__item" href="{{ url_for('item_management') }}">Item Management</a></li> -->
-                    <!-- <li><a class="menu__item" href="{{ url_for('user_management') }}">User Management</a></li> -->
+                    <li><a class="menu__item" href="{{ url_for('item_management') }}">Item Management</a></li>
+                    <li><a class="menu__item" href="{{ url_for('user_management') }}">User Management</a></li>
                 </ul>
-                <!-- {% endfor %} -->
+                
             </div>
             <h1>Welcome to </h1><img id="logo" src="../img/login-vendify-logo.png">
         </div>

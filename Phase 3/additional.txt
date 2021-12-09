@@ -1,0 +1,18 @@
+<!-- {% for item in nav.top %}
+                    <li class="{{ 'active' if item.is_active else '' }}">
+                        <a class="menu__item" href="{{ item.url }}">{{ item.label }}</a>
+                    </li> -->
+
+<!-- {% endfor %} -->
+
+# from flask_navigation import Navigation
+
+# nav = Navigation(app)
+# app.config["SECRET_KEY"] = "abc"
+
+# nav.Bar('top', [
+#     nav.Item('Menu', 'menu'),
+#     nav.Item('Serial Management', 'serial_management'),
+#     nav.Item('Item Management', 'item_management'),
+#     nav.Item('User Management', 'user_management')
+# ])
