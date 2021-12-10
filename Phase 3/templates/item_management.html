@@ -27,7 +27,17 @@
 
         </div>
         <h1>Item Management</h1>
-        <script type="text/javascript" src="static/js/script.js"></script>
+        <input type="text" placeholder="Machine Key">
+
+        <form class="form">
+            <button onclick="getItems()">Get items</button>
+            <p id="getItems"></p>
+            <button onclick="incrementStock()">Increment Stock</button>
+            <p id="incrementStock"></p>
+            <button onclick="decrementStock()">Decrement Stock</button>
+            <p id="decrementStock"></p>
+        </form>
+        <script type="text/javascript" src="static/script.js"></script>
     </div>
 </body>
 
